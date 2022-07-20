@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-/* body {
-  width: 100%;
-} */
-
 .banner {
   position: relative;
   display: flex;
@@ -18,7 +14,6 @@
   content: "";
   background-image: url('../assets/images/coffee.jpg');
   background-size: cover;
-  /* background-position: absolute; */
   position: absolute;
   height: 650px;
   top: 0px;
@@ -30,7 +25,6 @@
 
 p {
   text-align: center;
-  /* margin: 20px; */
   margin-bottom: 50vh;
   font-family: "Lobster", cursive;
   position: relative;
@@ -103,10 +97,6 @@ td {
 
 .mat-elevation-z8 tr:hover {background-color: #ddd;}
 
-/* #paginator {
-  width: 100%;
-} */
-
 footer {
   padding: 5px;
   margin-top: 30px;
@@ -120,12 +110,10 @@ footer {
   }
   
   .banner::before {
-    /* background-size: cover; */
     background-size: 100%;
     background-repeat: no-repeat;
     height: auto;
     width: 100%;
-    /* background-position: 50% 50%; */
   }
 
   p {
@@ -169,7 +157,6 @@ footer {
     background-repeat: no-repeat;
     height: auto;
     width: 100%;
-    /* background-position: 100% 100%; */
   }
 
   p {
@@ -180,11 +167,6 @@ footer {
   .big-text {
     font-size: 3.5rem;
   }
-
-  /* .right-navbar a {
-    font-size: 18px;
-    padding: 25px;
-  } */
 
   /* Style the navigation menu */
   .navbar {
@@ -207,13 +189,6 @@ footer {
     display: block;
     margin-right: 30px;
   }
-
-  /* Style the hamburger menu */
-  /* .navbar a.icon {
-    display: block;
-    position: absolute;
-    right: 0;
-  } */
 
   .navbar a.icon {
     display: block;
