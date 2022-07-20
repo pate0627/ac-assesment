@@ -1,0 +1,92 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+      <!-- <div class="navbar container-fluid"> -->
+      <div class="left-navbar">
+        <a class="navbar-logo" href="#">
+          <img class="logo-img" src="../assets/images/coffee.svg" alt="coffee/" />
+        </a>
+      </div>
+      <div class="right-navbar" id="right-navbar">
+        <a href="#home">Home</a> | <a href="#store">Store</a> |
+        <a href="#about">About</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+    <!-- navbar ends here -->
+
+  <div class="banner">
+      <p> Varieties of <span class="big-text">Coffee</span></p>
+  </div>
+
+  <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+    
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+    
+        <!-- Bland Name Column -->
+        <ng-container matColumnDef="blend_name">
+          <th mat-header-cell *matHeaderCellDef> Blend Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.blend_name}} </td>
+        </ng-container>
+    
+        <!-- Origin Column -->
+        <ng-container matColumnDef="origin">
+          <th mat-header-cell *matHeaderCellDef> Origin </th>
+          <td mat-cell *matCellDef="let element"> {{element.origin}} </td>
+        </ng-container>
+    
+        <!-- Variety Column -->
+        <ng-container matColumnDef="variety">
+          <th mat-header-cell *matHeaderCellDef> Variety </th>
+          <td mat-cell *matCellDef="let element"> {{element.variety}} </td>
+        </ng-container>
+
+        <!-- Notes Column -->
+        <ng-container matColumnDef="notes">
+          <th mat-header-cell *matHeaderCellDef> Notes </th>
+          <td mat-cell *matCellDef="let element"> {{element.notes}} </td>
+        </ng-container>
+
+        <!-- Intensifier Column -->
+        <ng-container matColumnDef="intensifier">
+          <th mat-header-cell *matHeaderCellDef> Intensifier </th>
+          <td mat-cell *matCellDef="let element"> {{element.intensifier}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+      <!-- Paginator -->
+      <mat-paginator #paginator
+          [length]="50"
+          [pageSize]="10"
+          [pageSizeOptions]="[10]">
+      </mat-paginator>
+  </div>
+  <footer></footer>
+</body>
+</html>
+
+<script>
+  function myFunction() {
+  const items = document.getElementById("#right-navbar");
+  if (items.style.display === "block") {
+    items.style.display = "none";
+  } else {
+    items.style.display = "block";
+  }
+}
+</script>
